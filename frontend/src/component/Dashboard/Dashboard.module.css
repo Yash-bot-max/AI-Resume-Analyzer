@@ -1,0 +1,322 @@
+.Dashboard {
+flex: 0.8;
+min-width: 0;
+height: 100vh;
+overflow-y: auto;
+padding: 35px;
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+gap: 25px;
+background-color: #f4f6fa;
+box-sizing: border-box;
+}
+
+.DashboardLeft {
+flex: 1 1 0;
+min-width: 0;
+padding: 30px;
+height: fit-content;
+box-sizing: border-box;
+background-color: #ffffff;
+border-radius: 20px;
+box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+}
+
+.DashboardHeaderTitle {
+font-size: 25px;
+font-weight: 600;
+color: #17173f;
+}
+
+.DashboardHeaderLargeTitle {
+font-size: 45px;
+font-weight: 700;
+color: #17173f;
+margin-top: 10px;
+}
+
+.alertInfo {
+width: 100%;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+border-radius: 20px;
+padding: 18px 20px;
+box-sizing: border-box;
+margin: 35px 0;
+font-size: 15px;
+background-color: #f8f9ff;
+color: #25254b;
+}
+
+.dashboardInstruction {
+margin-left: 20px;
+line-height: 1.8;
+}
+
+.DashboardUploadResume {
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 20px;
+}
+
+.DashboardResumeBlock {
+width: 65%;
+min-width: 0;
+background-color: #f8f9ff;
+border-radius: 18px;
+padding: 18px 25px;
+box-sizing: border-box;
+font-size: 16px;
+overflow-wrap: anywhere;
+}
+
+.DashboardInputFeild {
+display: flex;
+align-items: center;
+}
+
+.analyzeAIBtn {
+font-size: 16px;
+cursor: pointer;
+padding: 17px 28px;
+color: white;
+font-weight: 700;
+background: linear-gradient(90deg, #fca326, #f94a6b);
+border: none;
+border-radius: 30px;
+}
+
+/* Hide only the resume upload input, not other application inputs. */
+.DashboardInputFeild input {
+display: none;
+}
+
+.jobDesc {
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 25px;
+margin-top: 30px;
+box-sizing: border-box;
+}
+
+.textArea {
+outline: none;
+border-radius: 18px;
+border: 2px solid #d7d8f0;
+padding: 15px 20px;
+box-sizing: border-box;
+width: 65%;
+resize: vertical;
+font-size: 15px;
+font-family: inherit;
+}
+
+.textArea:focus {
+border-color: #6366f1;
+}
+
+.AnalyzeBtn {
+width: 145px;
+height: 145px;
+flex-shrink: 0;
+border: none;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 50%;
+background: linear-gradient(135deg, #fca326, #f94a6b);
+font-size: 21px;
+font-weight: 700;
+color: white;
+cursor: pointer;
+transition: all 0.3s ease;
+box-shadow: 0 8px 20px rgba(249, 74, 107, 0.25);
+}
+
+.AnalyzeBtn:hover:not(:disabled) {
+transform: translateY(-5px) scale(1.04);
+box-shadow: 0 12px 25px rgba(249, 74, 107, 0.35);
+}
+
+.AnalyzeBtn:disabled {
+opacity: 0.6;
+cursor: not-allowed;
+transform: none;
+}
+
+.DashboardRight {
+flex: 0 1 30%;
+min-width: 0;
+height: fit-content;
+box-sizing: border-box;
+display: flex;
+flex-direction: column;
+gap: 20px;
+}
+
+.DashboardRightTopCard {
+width: 100%;
+min-width: 0;
+border-radius: 20px;
+padding: 24px;
+background-color: #ffffff;
+box-sizing: border-box;
+display: flex;
+flex-direction: column;
+align-items: center;
+box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+}
+
+.DashboardRightTopCard div:first-child {
+font-size: 22px;
+font-weight: 700;
+}
+
+.profileImg {
+width: 100px;
+height: 100px;
+object-fit: cover;
+border-radius: 50%;
+margin: 20px 0;
+display: block;
+visibility: visible;
+opacity: 1;
+position: relative;
+z-index: 10;
+}
+
+.feedback {
+width: 100%;
+margin-top: 15px;
+align-self: stretch;
+box-sizing: border-box;
+}
+
+.feedback h3 {
+font-size: 18px;
+margin-bottom: 12px;
+color: #17173f;
+}
+
+.feedback p {
+font-size: 14px;
+line-height: 1.7;
+color: #444;
+overflow-wrap: anywhere;
+margin: 0;
+}
+
+.feedback button {
+font-size: 14px;
+}
+
+.defaultProfileIcon {
+width: 100px;
+height: 100px;
+color: #8b5cf6;
+border-radius: 50%;
+}
+
+.spinner {
+width: 18px;
+height: 18px;
+border: 3px solid rgba(255, 255, 255, 0.4);
+border-top-color: white;
+border-radius: 50%;
+animation: spin 0.7s linear infinite;
+margin-right: 8px;
+}
+
+@keyframes spin {
+to {
+transform: rotate(360deg);
+}
+}
+
+@media screen and (max-width: 1100px) {
+.Dashboard {
+padding: 25px;
+}
+
+.DashboardHeaderLargeTitle {
+font-size: 36px;
+}
+
+.DashboardRight {
+flex-basis: 35%;
+}
+}
+
+@media screen and (max-width: 780px) {
+.Dashboard {
+flex-direction: column;
+height: auto;
+min-height: 100vh;
+padding: 20px;
+}
+
+.DashboardLeft,
+.DashboardRight {
+width: 100%;
+flex: 1 1 auto;
+}
+
+.DashboardHeaderTitle {
+font-size: 22px;
+}
+
+.DashboardHeaderLargeTitle {
+font-size: 32px;
+}
+
+.DashboardUploadResume {
+flex-direction: column;
+align-items: stretch;
+}
+
+.DashboardResumeBlock {
+width: 100%;
+}
+
+.DashboardInputFeild {
+width: 100%;
+}
+
+.analyzeAIBtn {
+width: 100%;
+text-align: center;
+box-sizing: border-box;
+}
+
+.jobDesc {
+flex-direction: column;
+}
+
+.textArea {
+width: 100%;
+}
+
+.AnalyzeBtn {
+border-radius: 30px;
+width: 100%;
+height: auto;
+padding: 15px;
+box-sizing: border-box;
+}
+}
+
+@media screen and (max-width: 480px) {
+.DashboardLeft {
+padding: 20px;
+}
+
+.DashboardHeaderLargeTitle {
+font-size: 27px;
+}
+
+.alertInfo {
+margin: 25px 0;
+}
+}

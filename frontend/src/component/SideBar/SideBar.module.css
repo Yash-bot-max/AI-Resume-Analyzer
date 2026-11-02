@@ -1,0 +1,67 @@
+.sideBar {
+flex: 0.2;
+min-width: 0;
+background-color: #0b0b5a;
+color: white;
+height: 100vh;
+flex-shrink: 0;
+box-sizing: border-box;
+}
+
+.sideBarIcon {
+padding: 20px 30px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+.sideBarTopContent {
+font-size: 26px;
+text-align: center;
+}
+
+.sideBarOptionBlock {
+margin-top: 30px;
+}
+
+.sideBarOption {
+padding: 20px;
+display: flex;
+gap: 10px;
+align-items: center;
+font-size: 22px;
+cursor: pointer;
+color: white;
+text-decoration: none;
+transition: background-color 0.2s ease;
+}
+
+.sideBarOption:hover {
+background-color: rgb(45, 45, 160);
+}
+
+.selectedOption {
+background-color: rgb(72, 72, 222);
+}
+
+@media screen and (max-width: 780px) {
+.sideBar {
+height: auto;
+width: 100%;
+flex: none;
+}
+
+.sideBarIcon {
+padding: 15px;
+}
+
+.sideBarOptionBlock {
+margin-top: 10px;
+}
+
+.sideBarOption {
+padding: 14px 20px;
+font-size: 18px;
+}
+}
